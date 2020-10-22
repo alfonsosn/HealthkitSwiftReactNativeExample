@@ -1,0 +1,12 @@
+{
+  "name": "rn-healthkit",
+  "displayName": "rn-healthkit",
+  "expo": {
+    "name": "rn-healthkit",
+    "slug": "rn-healthkit",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}
