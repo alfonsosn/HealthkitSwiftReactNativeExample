@@ -1,12 +1,16 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import { TouchableOpacity } from 'react-native-gesture-handler';
+import HealthkitController from './Healthkit.js';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
       <StatusBar style="auto" />
+      <TouchableOpacity onPress={() => HealthkitController.requestAuthorization()}>
+        <Text>Request Healthkit Permissions</Text>
+      </TouchableOpacity>
     </View>
   );
 }

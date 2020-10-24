@@ -1,4 +1,11 @@
-// App.js
-import { NativeModules } from 'react-native'
+import { NativeModules, NativeEventEmitter } from 'react-native'
 
-console.log(NativeModules.Controller)
+class Controller extends NativeEventEmitter {
+  constructor(nativeModule) {
+    super(nativeModule);
+
+    this.requestAuthorization = nativeModule.requestAuthorization
+  }
+}
+
+export default new Controller(NativeModules.Controller)
