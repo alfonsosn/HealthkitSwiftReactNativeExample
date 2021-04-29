@@ -131,7 +131,20 @@ const PrimaryView = () => {
   const hkObject = GenerateEmptyHKOjbect(activityType);
 
   const createHKWorkoutHandler = async () => {
-    console.log('press')
+    const data = await HealthkitController.createHKWorkout(hkObject);
+    if (data) {
+      Alert.alert(
+        "Healthkit Workouts Saved!",
+        data,
+        [
+          {
+            text: "Done",
+            onPress: () => {},
+          },
+        ],
+        { cancelable: false }
+      );
+    }
   };
 
   return (

@@ -11,4 +11,15 @@
 
 RCT_EXTERN_METHOD(requestAuthorization)
 
+RCT_EXTERN_METHOD(createHKWorkout:(NSString*)activityType
+                  startDate:(NSDate*)startDate
+                    endDate:(NSDate*)endDate
+          totalEnergyBurned:(NSNumber*)totalEnergyBurned
+              totalDistance:(NSNumber*)totalDistance
+               distanceUnit:(NSString *)distanceUnit
+                   metadata:(NSDictionary*)metadata
+                  resolver:(RCTPromiseResolveBlock)resolve 
+                  rejecter:(RCTPromiseRejectBlock)reject)
+
 @end
+
